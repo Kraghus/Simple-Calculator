@@ -5,16 +5,16 @@
 
 int main()
 {
-	/* asks user for the first double value */
+	/* asks user for the first double value and stores the return value as type int */
 	double firstDouble{ getDouble() };	
 	
-	/* asks user which operator to use */
+	/* asks user which operator to use and stores the return value as type char */
 	char op{ getOperator() };			
 
-	/* asks user for the second double value */
+	/* asks user for the second double value and stores the return value as type int */
 	double secondDouble{ getDouble() };
 
-	/* passes input to be calculated and printed */
+	/* uses stored values to pass user input in order to be calculated and printed */
 	printCalculation(firstDouble, secondDouble, op);
 
 	return 0;

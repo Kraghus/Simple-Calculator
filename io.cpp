@@ -23,8 +23,8 @@ char getOperator()
 	return op;
 }
 
-/* Takes in parameters of user input and compares char literal to determine */
-/* which calculation to use and what to print back to the user.             */
+/* Takes in parameters of user input from main and compares char literal to determine */
+/* which calculation to use and what to print back to the user.                       */
 void printCalculation(double firstDouble, double secondDouble, char op)
 {
 	if (op == '+')
