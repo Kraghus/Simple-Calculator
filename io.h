@@ -1,5 +1,7 @@
-#define IO_H
+// declares all functions for input / output
+
 #ifndef IO_H
+#define IO_H
 
 double getDouble();
 char getOperator();
