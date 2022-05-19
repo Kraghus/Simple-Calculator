@@ -1,8 +1,7 @@
-#include <iostream>
+/* This program collects 2 operands and 1 operator as user input and */
+/* outputs the solution to the console.								 */
 
-double getDouble();
-char getOperator();
-void printCalculation(double firstDouble, double secondDouble, char op);
+#include "io.h"
 
 int main()
 {
