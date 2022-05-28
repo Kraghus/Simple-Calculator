@@ -41,6 +41,11 @@ void printCalculation(double firstDouble, double secondDouble, char op)
 	case '/':
 		std::cout << firstDouble << " / " << secondDouble << " is " << (firstDouble / secondDouble) << '\n';
 		break;
+	case '%':
+		std::cout << firstDouble << " % " << secondDouble << " is " <<
+				  // Converts double values to integer values in order to use modulus operator.
+			      (static_cast<int>(firstDouble) % static_cast<int>(secondDouble)) << '\n';
+		break;
 	default:
 		std::cout << "You entered an invalid operator. Try again.\n";
 		return;
