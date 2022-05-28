@@ -27,14 +27,22 @@ char getOperator()
 // which calculation to use and what to print back to the user.
 void printCalculation(double firstDouble, double secondDouble, char op)
 {
-	if (op == '+')
+	switch (op)
+	{
+	case '+':
 		std::cout << firstDouble << " + " << secondDouble << " is " << (firstDouble + secondDouble) << '\n';
-	else if (op == '-')
+		break;
+	case '-':
 		std::cout << firstDouble << " - " << secondDouble << " is " << (firstDouble - secondDouble) << '\n';
-	else if (op == '*')
+		break;
+	case '*':
 		std::cout << firstDouble << " * " << secondDouble << " is " << (firstDouble * secondDouble) << '\n';
-	else if (op == '/')
+		break;
+	case '/':
 		std::cout << firstDouble << " / " << secondDouble << " is " << (firstDouble / secondDouble) << '\n';
-	else
+		break;
+	default:
 		std::cout << "You entered an invalid operator. Try again.\n";
+		return;
+	}
 }
