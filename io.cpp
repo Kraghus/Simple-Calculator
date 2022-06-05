@@ -23,6 +23,10 @@ char getOperator()
 		char op{};
 		std::cin >> op;
 
+		// clears any extraneous input
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+		// checks to see if the user has entered a valid operator
 		if ((op == '+') || (op == '-') || (op == '*') || (op == '/') || (op == '%'))
 		{
 			return op;
