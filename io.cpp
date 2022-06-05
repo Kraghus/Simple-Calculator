@@ -14,11 +14,11 @@ double getDouble()
 	// clears any extraneous input
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	if (!std::cin) // has a previous extraction failed or overflowed?
+	// tests for and fixes failed extractions or overflow
+	if (!std::cin)
 	{
-		// yep, so let's handle the failure
-		std::cin.clear(); // put us back in 'normal' operation mode
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 
 	return number;
