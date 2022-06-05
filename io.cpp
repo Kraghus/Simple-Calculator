@@ -6,10 +6,21 @@
 // Asks the user for a double value, stores it, and returns the stored value to
 // the main function.
 double getDouble()
-{
+{	
 	std::cout << "Enter a double value: ";
 	double number{};
 	std::cin >> number;
+
+	// clears any extraneous input
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+	if (!std::cin) // has a previous extraction failed or overflowed?
+	{
+		// yep, so let's handle the failure
+		std::cin.clear(); // put us back in 'normal' operation mode
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // and remove the bad input
+	}
+
 	return number;
 }
 
