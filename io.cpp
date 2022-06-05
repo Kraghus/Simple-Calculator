@@ -17,10 +17,22 @@ double getDouble()
 // to the main function.
 char getOperator()
 {
-	std::cout << "Enter one of the following operators: +, -, *, or /: ";
-	char op{};
-	std::cin >> op;
-	return op;
+	while (true)
+	{
+		std::cout << "Enter one of the following operators: +, -, *, /, or %: ";
+		char op{};
+		std::cin >> op;
+
+		if ((op == '+') || (op == '-') || (op == '*') || (op == '/') || (op == '%'))
+		{
+			return op;
+		}
+		else
+		{
+			std::cout << "Invalid operator chosen. Please try again.\n";
+			continue;
+		}
+	}
 }
 
 // Takes in parameters of user input from main and compares char literal to determine
